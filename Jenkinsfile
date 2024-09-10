@@ -21,7 +21,7 @@ pipeline {
               sh "git add ."
               sh "git commit -m 'Done by Jenkins Job changemanifest: ${params.BUILD_NUMBER}'"
               sh '''
-                git remote set-url origin https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git
+                git remote set-url origin https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetescode-manifest.git
                 git push origin HEAD:main
               '''
             }
